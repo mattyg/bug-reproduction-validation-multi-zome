@@ -63,3 +63,15 @@ pub fn update_post(input: UpdatePostInput) -> ExternResult<Record> {
 pub fn delete_post(original_post_hash: ActionHash) -> ExternResult<ActionHash> {
     delete_entry(original_post_hash)
 }
+
+#[hdk_extern]
+pub fn create_demo_link(_: ()) -> ExternResult<ActionHash> {
+    create_link(Path::from("all_agents").path_entry_hash()?, agent_info()?.agent_initial_pubkey, LinkTypes::AllAgents, ())
+}
+
+
+
+#[hdk_extern]
+pub fn delete_demo_link(action_hash: ActionHash) -> ExternResult<ActionHash> {
+    delete_link(action_hash)
+}

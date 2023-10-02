@@ -12,6 +12,7 @@ pub enum EntryTypes {
 #[hdk_link_types]
 pub enum LinkTypes {
     PostUpdates,
+    AllAgents,
 }
 #[hdk_extern]
 pub fn genesis_self_check(
