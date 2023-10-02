@@ -9,8 +9,11 @@ name = "valid"
 
 [dependencies]
 hdk = { workspace = true }
-holochain_integrity_types = { workspace = true }
 
 serde = { workspace = true }
 
 valid_integrity = { workspace = true } 
+
+
+[dev-dependencies]
+holochain = { version = "0.2.2", default-features=false, features=["test_utils"]}
