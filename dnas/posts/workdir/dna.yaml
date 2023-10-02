@@ -1,0 +1,43 @@
+---
+manifest_version: "1"
+name: posts
+integrity:
+  network_seed: ~
+  properties: ~
+  origin_time: 1696211747170765
+  zomes:
+    - name: valid_integrity
+      hash: ~
+      bundled: "../../../target/wasm32-unknown-unknown/release/valid_integrity.wasm"
+      dependencies: ~
+      dylib: ~
+    - name: invalid_integrity
+      hash: ~
+      bundled: "../../../target/wasm32-unknown-unknown/release/invalid_integrity.wasm"
+      dependencies: ~
+      dylib: ~
+    - name: valid_always_integrity
+      hash: ~
+      bundled: "../../../target/wasm32-unknown-unknown/release/valid_always_integrity.wasm"
+      dependencies: ~
+      dylib: ~
+coordinator:
+  zomes:
+    - name: valid
+      hash: ~
+      bundled: "../../../target/wasm32-unknown-unknown/release/valid.wasm"
+      dependencies:
+        - name: valid_integrity
+      dylib: ~
+    - name: invalid
+      hash: ~
+      bundled: "../../../target/wasm32-unknown-unknown/release/invalid.wasm"
+      dependencies:
+        - name: invalid_integrity
+      dylib: ~
+    - name: valid_always
+      hash: ~
+      bundled: "../../../target/wasm32-unknown-unknown/release/valid_always.wasm"
+      dependencies:
+        - name: valid_always_integrity
+      dylib: ~

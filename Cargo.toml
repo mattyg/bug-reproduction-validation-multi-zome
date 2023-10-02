@@ -1,11 +1,26 @@
-[workspace]
-members = [
-  "dnas/*/zomes/coordinator/*",
-  "dnas/*/zomes/integrity/*",
-]
-
 [profile.dev]
 opt-level = "z"
 
 [profile.release]
 opt-level = "z"
+
+[workspace]
+members = ["dnas/*/zomes/coordinator/*", "dnas/*/zomes/integrity/*"]
+
+[workspace.dependencies]
+hdi = "=0.3.1"
+hdk = "=0.2.1"
+holochain_integrity_types = "=0.1.2"
+serde = "=1.0.166"
+
+[workspace.dependencies.invalid]
+path = "dnas/posts/zomes/coordinator/invalid"
+
+[workspace.dependencies.invalid_integrity]
+path = "dnas/posts/zomes/integrity/invalid"
+
+[workspace.dependencies.valid]
+path = "dnas/posts/zomes/coordinator/valid"
+
+[workspace.dependencies.valid_integrity]
+path = "dnas/posts/zomes/integrity/valid"
