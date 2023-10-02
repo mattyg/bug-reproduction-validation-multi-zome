@@ -2,7 +2,6 @@
   "name": "bug-reproduction-template-dev",
   "private": true,
   "workspaces": [
-    "ui",
     "tests"
   ],
   "scripts": {
