@@ -16,4 +16,4 @@ valid_integrity = { workspace = true }
 
 
 [dev-dependencies]
-holochain = { version = "0.2.2", default-features=false, features=["test_utils"]}
+# holochain = { version = "0.2.2", default-features=false, features=["test_utils"]}
